@@ -21,7 +21,7 @@ Basado en la gráfica comparativa y los registros del entrenamiento, podemos obs
    * **SGD** demuestra ser bastante estable. La caída en su función de pérdida es constante y predecible a lo largo de las iteraciones.
    * **Adam** también es estable en este problema sencillo, pero en el gráfico de pérdida de validación a veces se pueden notar ligeras fluctuaciones al final de las épocas, dado que su ajuste adaptativo de la tasa de aprendizaje puede llevarlo a "saltar" un poco una vez que se acerca al mínimo global.
 
-3. **Hallazgos sobre los Optimizadoress:**
+3. **Hallazgos sobre los Optimizadores:**
    * El optimizador adaptativo (**Adam**) ajusta dinámicamente la tasa de aprendizaje por cada parámetro, lo que es ideal para superar "mesetas" rápidamente y por eso su loss inicial cae en picada.
    * Por otro lado, **SGD** clásico con un learning rate fijo de `0.01` requiere muchas más iteraciones para actualizar los pesos significativamente. Si aumentáramos el *learning rate* de SGD a un valor muy alto (ej. `0.5`), podríamos acelerarlo, pero correríamos el riesgo de generar oscilaciones inestables (divergencia).
    * **Conclusión general:** Para este tipo de red MLP multicapa estándar, Adam ofrece un excelente compromiso de velocidad sin requerir un ajuste minucioso de la tasa de aprendizaje, ahorrando tiempo computacional (épocas) respecto a un SGD estándar.
